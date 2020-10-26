@@ -1,0 +1,23 @@
+{
+  "name": "es6-express-template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "tsc -w",
+    "run-server": "nodemon ./runtime/bin/www"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "log4js": "latest",
+    "naudiodon":"latest"
+  }
+}

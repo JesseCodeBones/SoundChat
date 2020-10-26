@@ -1,0 +1,21 @@
+
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "outDir": "runtime/",
+    "sourceMap": true,
+    "lib": [
+      "es7",
+      "dom"
+    ]
+  },
+  "include": [
+    "src/"
+  ]
+}
