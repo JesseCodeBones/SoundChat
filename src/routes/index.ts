@@ -1,3 +1,4 @@
+import { UserManager } from "../service/UserManager";
 
 //@ts-ignore
 var express = require('express');
@@ -17,7 +18,7 @@ export class IndexRouter {
             let username = req.body["username"];
             let password:string = req.body["password"];
             console.log(`username: ${username}, password: ${password}`);
-            res.end("success");
+            res.end(UserManager.checkAuthority(username, password));
         });
 
         return index_router;
