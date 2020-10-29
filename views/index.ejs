@@ -7,5 +7,29 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <video id="jesse-demo" autoPlay="true"></video>
   </body>
+
+  <script>
+    var video = document.querySelector('video'); 
+    video.onloadeddata = function(data){console.log(data)}
+    function onSuccessWithSrcObject(stream) {
+      video.srcObject = stream;
+}
+
+function onSuccessWithSrc(stream) {
+  video.src = window.URL.createObjectURL(stream);
+}
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+  .then(stream => {
+    stream.addEventListener("data", (data)=>{console.log(data)});
+    if ("srcObject" in video) {
+      onSuccessWithSrcObject(stream)
+    } else {
+      onSuccessWithSrc(stream)
+    }
+  })
+  .catch( err => alert(`Bummer! ${err.name}.`))
+   
+  </script>
 </html>

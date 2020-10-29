@@ -11,6 +11,15 @@ export class IndexRouter {
         index_router.get('/', function(req, res, next) {
             res.render('index', { title: 'Express' });
         });
+
+        index_router.post('/login', function(req, res, next){
+            console.log(req);
+            let username = req.body["username"];
+            let password:string = req.body["password"];
+            console.log(`username: ${username}, password: ${password}`);
+            res.end("success");
+        });
+
         return index_router;
     }
 }

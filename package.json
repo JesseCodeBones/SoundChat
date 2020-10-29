@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "compile": "tsc -w",
-    "run-server": "nodemon ./runtime/bin/www"
+    "run-server": "node ./runtime/bin/www"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
